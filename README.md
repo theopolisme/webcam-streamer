@@ -10,7 +10,7 @@ webcam-streamer
  - Install [OpenCV](http://opencv.org/)
  - `pip install webcam-streamer`
  - `webcam-streamer`
- - You're live!
+ - You're live @ [localhost:5000](http://localhost:5000)!
 
 ## Customizations
 

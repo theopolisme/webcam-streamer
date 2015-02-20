@@ -6,7 +6,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='webcam-streamer',
-    version='1.0.4',
+    version='1.0.5',
     description='Simple USB webcam streaming',
     url='https://github.com/theopolisme/webcam-streamer',
     author='Theo Patt',
