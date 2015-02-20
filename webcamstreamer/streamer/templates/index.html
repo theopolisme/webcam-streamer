@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='skeleton.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="section hero">
+        <div class="container">{{ title }}</div>
+      </div>
+      <div class="section container feeds">
+        {% for row in camera_rows %}
+          <div class="row">
+            {% for nickname, camera_id in row %}
+              <div data-id="{{ camera_id }}" class="one-half column stream">
+                <h5>{{ nickname }} <small><span class="fps"></span> fps</small></h5>
+                <canvas></canvas>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>No cameras found. <small><a href="{{ url_for('home') }}">(refresh)</a></small></p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="footer">
+      Powered by <a href="https://github.com/theopolisme/webcam-streamer">webcam-streamer</a>.
+    </div>
+    <script src="{{ url_for('static', filename='socketio.js') }}"></script>
+    <script>
+      CAMERA_WIDTH = {{ width }};
+      CAMERA_HEIGHT = {{ height }};
+    </script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
