@@ -6,7 +6,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='webcam-streamer',
-    version='1.0.3',
+    version='1.0.4',
     description='Simple USB webcam streaming',
     url='https://github.com/theopolisme/webcam-streamer',
     author='Theo Patt',
@@ -34,6 +34,7 @@ setup(
     ],
     setup_requires=['setuptools-markdown'],
     long_description_markdown_filename='README.md',
+    include_package_data=True,
     entry_points={
         'console_scripts': [
             'webcam-streamer=webcamstreamer.launcher:main',

@@ -39,6 +39,9 @@ default=Camera #{id}   ; The default title to display above each camera
 
 Additionally, custom mappings of `id->name` can be included in camera_names. For example, if Camera #0 is the garage camera, you could add something like `0=Garage camera` to the `camera_names` config section.
 
+## Screenshot
+![Because, y'know, why not.](https://cloud.githubusercontent.com/assets/1410202/6306191/fd5c1762-b8f6-11e4-935a-5b0e1aa9db94.png)
+
 ## Technical details
 
 `webcam-streamer` uses Flask, deployed with Gunicorn, to serve a web frontend. Individual camera feeds, acquired from cameras using OpenCV, are delivered to clients using WebSockets.
