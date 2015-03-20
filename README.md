@@ -50,6 +50,12 @@ Additionally, custom mappings of `id->name` can be included in camera_names. For
  - OpenCV
  - Python 2.7+, 3+
 
+## Deploying on an NVIDIA Jetson TK1
+
+Unfortunately the NVIDIA-supplied OpenCV library, "[opencv4tegra](http://elinux.org/Jetson/Computer_Vision_Performance#Hardware_Acceleration_of_OpenCV)", doesn't have USB camera support built in to the kernel, so **you'll need to build and install OpenCV from the source**. Although this naturally will require you to forfeit the Tegra CPU optimizations included in the custom library, [endless depressing errors](https://devtalk.nvidia.com/default/topic/752109/-opencv4tegra-2-4-8-2-on-jetson-tk1/) will otherwise befall you so it's probably worth it.
+
+The [instructions on the eLinux wiki](http://elinux.org/Jetson/Installing_OpenCV#Natively_compiling_the_OpenCV_library_from_source_onboard_the_device) have been tested and work using OpenCV 3.0.0-beta.
+
 ## License
 
 ```
