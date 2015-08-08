@@ -4,7 +4,10 @@ from __future__ import print_function
 
 import os
 import subprocess
-import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 try:
     import ConfigParser as configparser
 except ImportError:
