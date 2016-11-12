@@ -6,7 +6,10 @@ import time
 import base64
 import os
 import logging
-import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 try:
     import ConfigParser as configparser
 except ImportError:
