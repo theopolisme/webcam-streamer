@@ -15,6 +15,7 @@ addons:
 before_install:
   - pip install -U pip
   - pip install -U setuptools
+  - pip install -U wheel
 
 install:
   - pip install .
