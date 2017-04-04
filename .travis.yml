@@ -12,6 +12,9 @@ addons:
     packages:
     - pandoc
 
+before_install:
+  - pip install -U pip
+
 install:
   - pip install .
 
