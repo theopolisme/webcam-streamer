@@ -1,4 +1,4 @@
-webcam-streamer
+webcam-streamer [![Build Status](https://travis-ci.org/theopolisme/webcam-streamer.svg?branch=master)](https://travis-ci.org/theopolisme/webcam-streamer)
 ===
 
 *Dead simple USB webcam streaming over the internet*
