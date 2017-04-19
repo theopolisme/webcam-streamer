@@ -38,7 +38,7 @@ def main():
 
     config = configparser.ConfigParser()
 
-    from streamer.defaults import defaults
+    from .streamer.defaults import defaults
     defaults_buf = StringIO.StringIO(defaults)
     try:
         config.read_file(defaults_buf)
