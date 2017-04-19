@@ -1,0 +1,23 @@
+sudo: false
+language: python
+
+python:
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+
+addons:
+  apt:
+    packages:
+    - pandoc
+
+before_install:
+  - pip install -U pip
+  - pip install -U setuptools
+  - pip install -U wheel
+
+install:
+  - pip install .
+
+script: true
